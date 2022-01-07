@@ -1,0 +1,5 @@
+{
+	"prefix": "!",
+  "openseaAssetUrl": "https://rinkeby-api.opensea.io/api/v1/asset",
+  "openseaEventsUrl": "https://rinkeby-api.opensea.io/api/v1/events"
+}

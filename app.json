@@ -1,0 +1,46 @@
+{
+  "name": "Flippy Bot",
+  "description": "A Discord bot for getting NFT data from OpenSea",
+  "logo": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c6a663bc-9d5b-4278-86af-8c40b04a4073/CF-Original_4x.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220106%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220106T143608Z&X-Amz-Expires=86400&X-Amz-Signature=0bb7d0c43bf9611768ed95b325c7935cb78144275cb1ae11bb265540523f5b59&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22CF-Original%25204x.png%22&x-id=GetObject",
+  "keywords": [
+    "erc721",
+    "nft",
+    "discord",
+    "opensea",
+    "flippy",
+    "chainflip"
+  ],
+  "repository": "https://github.com/lucid-eleven/nft-discord-bot",
+  "env": {
+    "CONTRACT_ADDRESS": {
+      "description": "Ethereum address for the NFT Smart Contract",
+      "required": true
+    },
+    "DISCORD_BOT_TOKEN": {
+      "description": "Pretty self explanatory",
+      "required": true
+    },
+    "DISCORD_SALES_CHANNEL_ID": {
+      "description": "The discord channel id where sales events should be posted to, should look like a long number",
+      "required": true
+    },
+    "DISCORD_TOKEN_COMMAND": {
+      "description": "The command word you'd like the bot to respond to for posting token information, pick a simple word that represents the collection.  Default: token",
+      "required": false
+    },
+    "OPEN_SEA_API_KEY": {
+      "description": "Contact OpenSea to request an API key at https://docs.opensea.io/reference#request-an-api-key. The bot will work without it, but heavy use may result in being blocked.",
+      "required": false
+    },
+    "OPEN_SEA_COLLECTION_NAME": {
+      "description": "The collection slug name on OpenSea, get this from the browser when you are viewing a collection.",
+      "required": true
+    }
+  },
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
