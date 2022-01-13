@@ -7,8 +7,7 @@ const ttl = 60; //cache for 60 seconds;
 const cache = new CacheService(ttl);
 
 const fetchFloor = async () => {
-  //let url = `https://api.opensea.io/api/v1/collection/${process.env.OPEN_SEA_COLLECTION_NAME}/stats`    CHANGE THIS WHEN MAINNNET
-  let url = `https://rinkeby-api.opensea.io/api/v1/collection/${process.env.OPEN_SEA_COLLECTION_NAME}/stats`
+  let url = `https://api.opensea.io/api/v1/collection/${process.env.OPEN_SEA_COLLECTION_NAME}/stats`
 
   let settings = { 
     method: "GET",
